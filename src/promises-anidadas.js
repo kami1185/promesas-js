@@ -53,3 +53,55 @@ obtenerUsuario(userId)
   });
 
 console.log("Código después de iniciar la secuencia (se ejecuta inmediatamente).");
+
+
+// ******************************************* PROMISES:ALL *******************************************
+
+
+// Definimos un array con las URLs de los endpoints a los que queremos hacer fetch
+    const urls = [
+    'https://jsonplaceholder.typicode.com/posts',
+    'https://jsonplaceholder.typicode.com/users',
+    'https://jsonplaceholder.typicode.com/comments'
+  ];
+  
+  // Creamos un array de promesas, donde cada promesa es el resultado de una llamada a fetch
+//   const promises = urls.map(url =>
+//     fetch(url)
+//       .then(response => {
+//         // Verificamos si la respuesta fue exitosa (status 2xx)
+//         if (!response.ok) {
+//           throw new Error(`Error en la petición a ${url}: ${response.statusText}`);
+//         }
+//         // Parseamos la respuesta como JSON
+//         return response.json();
+//       })
+//       .catch(error => {
+//         console.error(`Hubo un error al obtener datos de ${url}:`, error);
+//         // Relanzamos el error o retornamos algo que indique el fallo si es necesario
+//         throw error;
+//       })
+//   );
+  
+//   // Usamos Promise.all para esperar a que todas las promesas se resuelvan
+//   Promise.all(promises)
+//     .then(data => {
+//       // 'data' es un array que contiene los resultados de cada promesa en el mismo orden que las URLs
+//       const posts = data[0];
+//       const users = data[1];
+//       const comments = data[2];
+  
+//       console.log('Datos de Posts:', posts);
+//       console.log('Datos de Usuarios:', users);
+//       console.log('Datos de Comentarios:', comments);
+  
+//       // Aquí puedes trabajar con los datos obtenidos de las tres peticiones
+//       // Por ejemplo, podrías actualizar la UI, combinar los datos, etc.
+//     })
+//     .catch(error => {
+//       // Este catch se ejecutará si alguna de las promesas en Promise.all falla
+//       console.error('Al menos una de las peticiones falló:', error);
+//     });
+  
+//   console.log('Este mensaje aparece antes que los resultados de fetch porque las peticiones son asíncronas.');
+

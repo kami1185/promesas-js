@@ -34,17 +34,32 @@ function simularOperacionExitosa() {
 // Esta función devuelve un nuevo objeto Promise.
 
 // 2. return new Promise(function(resolve, reject) { ... });: Creamos una nueva promesa usando el constructor Promise.
-// El constructor recibe una función ejecutora con dos argumentos: resolve y reject. Estas son funciones proporcionadas por JavaScript para cambiar el estado de la promesa.
-// console.log("Iniciando operación exitosa...");: Mensaje que se imprime inmediatamente al crear la promesa.
-// setTimeout(function() { ... }, 2000);: Usamos setTimeout para simular una operación asíncrona que tarda 2 segundos.
-// console.log("Operación exitosa finalizada.");: Este mensaje se imprime después del retraso de 2 segundos.
-// const datos = { mensaje: "Operación completada con éxito!" };: Creamos algunos datos que representarán el resultado de la operación.
-// resolve(datos);: Este es el paso clave que cambia el estado de la promesa a fulfilled. Llamamos a la función resolve y le pasamos los datos como el valor resultante de la promesa.
-// console.log("Antes de llamar a la promesa.");: Mensaje que se imprime antes de invocar la función que devuelve la promesa.
-// simularOperacionExitosa(): Llamamos a la función. Esto crea y devuelve la promesa, y el código dentro de la función ejecutora comienza a ejecutarse (incluyendo el setTimeout).
+// 
+// 3.El constructor recibe una función ejecutora con dos argumentos: resolve y reject. 
+// Estas son funciones proporcionadas por JavaScript para cambiar el estado de la promesa.
+// 
+// 4. console.log("Iniciando operación exitosa...");: Mensaje que se imprime inmediatamente al crear la promesa.
+// 
+// 5.setTimeout(function() { ... }, 2000);: Usamos setTimeout para simular una operación asíncrona que tarda 2 segundos.
+// 
+// 6.console.log("Operación exitosa finalizada.");: Este mensaje se imprime después del retraso de 2 segundos.
+// 
+// 7.const datos = { mensaje: "Operación completada con éxito!" };: 
+// Creamos algunos datos que representarán el resultado de la operación.
+// 
+// 8. resolve(datos);: Este es el paso clave que cambia el estado de la promesa a fulfilled. 
+// Llamamos a la función resolve y le pasamos los datos como el valor resultante de la promesa.
+// 
+// 9. console.log("Antes de llamar a la promesa.");: 
+// Mensaje que se imprime antes de invocar la función que devuelve la promesa.
+// 
+// 10. simularOperacionExitosa(): Llamamos a la función. 
+// Esto crea y devuelve la promesa, y el código dentro de la función ejecutora comienza a ejecutarse (incluyendo el setTimeout).
 // .then(function(resultado) { ... }): Adjuntamos un manejador .then() a la promesa devuelta por simularOperacionExitosa(). La función pasada a .then() se ejecutará solo cuando la promesa se resuelva (fulfilled). El argumento resultado de esta función es el valor que se pasó a resolve() (en este caso, el objeto datos).
 // .catch(function(error) { ... }): Adjuntamos un manejador .catch(). Esta función se ejecutaría si la promesa fuera rechazada, pero en este ejemplo, la promesa siempre se resuelve.
+// 
 // console.log("Después de llamar a la promesa."); console.log("Este código se ejecuta inmediatamente, sin esperar la promesa.");: Estos mensajes se imprimen inmediatamente después de llamar a simularOperacionExitosa(), demostrando que la llamada a la función no bloquea la ejecución del código principal.
+// 
 // Después de 2 segundos: El setTimeout se completa, se imprime "Operación exitosa finalizada.", se llama a resolve(datos), lo que cambia el estado de la promesa a fulfilled y activa la ejecución de la función dentro del .then().
 
 // Salida final:
