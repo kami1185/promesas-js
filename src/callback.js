@@ -101,28 +101,28 @@
 // *******************************************************************************************************
 
 
-    let result = [];
+    // let result = [];
 
-    function raisedSquareCallback(value, callback){
-        setTimeout(()=>{
-            result = [...result,'Async task completed!'];
-            // recibe un valor y la funcion a ejecutar, la multiplicacion y seria la callback a resolver:
-            callback(value, value*value);
-        },0 | Math.random() * 2000)
-    }
+    // function raisedSquareCallback(value, callback){
+    //     setTimeout(()=>{
+    //         result = [...result,'Async task completed!'];
+    //         // recibe un valor y la funcion a ejecutar, la multiplicacion y seria la callback a resolver:
+    //         callback(value, value*value);
+    //     },0 | Math.random() * 2000)
+    // }
 
 
-    // enviamos el valor a calcular y una funcion anonima en la cual el callback nos devuelve el valor 
-    // y el resultado del valor elevado al cuadrado, y recibimos esos argumentos en la funcion anonima
-    raisedSquareCallback(0,(value,res)=> {
-        result = [...result,'Init Callback'];
-        result = [...result,`${value} * ${value} = ${res}`];
-        // se puede invocar nuevamente la Callback, ESTO FORMA UN CALLBACK HELL QUE SE DEBE EVITAR
-        raisedSquareCallback(1,(value,res)=> {
-            result = [...result,`${value} * ${value} = ${res}`];
-            raisedSquareCallback(2,(value,res)=> {
-                result = [...result,`${value} * ${value} = ${res}`];
-                console.log('RESULT:::::::::::::::',result);
-            })
-        })
-    })
+    // // enviamos el valor a calcular y una funcion anonima en la cual el callback nos devuelve el valor 
+    // // y el resultado del valor elevado al cuadrado, y recibimos esos argumentos en la funcion anonima
+    // raisedSquareCallback(0,(value,res)=> {
+    //     result = [...result,'Init Callback'];
+    //     result = [...result,`${value} * ${value} = ${res}`];
+    //     // se puede invocar nuevamente la Callback, ESTO FORMA UN CALLBACK HELL QUE SE DEBE EVITAR
+    //     raisedSquareCallback(1,(value,res)=> {
+    //         result = [...result,`${value} * ${value} = ${res}`];
+    //         raisedSquareCallback(2,(value,res)=> {
+    //             result = [...result,`${value} * ${value} = ${res}`];
+    //             console.log('RESULT:::::::::::::::',result);
+    //         })
+    //     })
+    // })
